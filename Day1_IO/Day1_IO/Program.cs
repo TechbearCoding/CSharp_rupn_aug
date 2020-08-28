@@ -6,20 +6,7 @@ namespace Day1_IO
     {
         static void Main(string[] args)
         {
-            Sample2(1,2);
-
-            int a = 5;
-
-            Sample2(6, a);
-
-
-            int rez = Sample3();
-
-            Console.WriteLine(rez);
-
-            Console.WriteLine(Sample3());
-
-            Sample2(a, Sample3());
+            Task2(); 
         }
 
         static void Sample2(int number1, int number2)
