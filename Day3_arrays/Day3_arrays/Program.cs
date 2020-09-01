@@ -6,20 +6,49 @@ namespace Day3_arrays
     {
         static void Main(string[] args)
         {
-            int[] arr = FillArr();
+            String[] arr = { "aa", "bb","ccc", "aa"};
 
-            PrintArr(arr);
+            Console.WriteLine("Kopejais simbolu skaits ir " + GetStrLen(arr));
+   
 
-            ClearArr(arr);
+      
+        }
 
-            PrintArr(arr);        
+        private static int GetStrLen(string[] arr)
+        {
+            int len = 0;
+
+            for(int i = 0; i < arr.Length; i++)
+            {
+                len += arr[i].Length;
+            }
+
+            return len;
+        }
+
+        static int[] GenRandom(int len)
+        {
+            int[] a = new int[len];
+
+            Random rand = new Random();
+
+            for(int i = 0; i < len; i++)
+            {
+                a[i] = rand.Next(101);
+            }
+
+            return a;
         }
 
         static void ClearArr(int[] a)
         {
             for (int i = 0; i < a.Length; i++)
             {
-                a[i] = 0;
+                if(a[i] > 50)
+                {
+                    a[i] = 0;
+                }
+                
             }
         }
 
