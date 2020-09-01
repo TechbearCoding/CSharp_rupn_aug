@@ -6,7 +6,24 @@ namespace Day2_LoopsAndArrays
     {
         static void Main(string[] args)
         {
-            Task2();
+            ArraySample();
+        }
+
+        private static void ArraySample()
+        {
+            int[] a = new int[5];
+
+            int b = Convert.ToInt32(Console.ReadLine());
+            a[0] = 99;
+            a[1] = 99;
+            a[2] = 99;
+            a[3] = 99;
+            a[4] = 99;
+
+            for(int i = 0; i < a.Length; i++)
+            {
+                a[i] = 99;
+            }
         }
 
         static void Task2()
