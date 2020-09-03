@@ -6,12 +6,15 @@ namespace Day3_arrays
     {
         static void Main(string[] args)
         {
-            String[] arr = { "aa", "bb","ccc", "aa"};
+            //String[] arr = { "aa", "bb","ccc", "aa"};
 
-            Console.WriteLine("Kopejais simbolu skaits ir " + GetStrLen(arr));
-   
+            //Console.WriteLine("Kopejais simbolu skaits ir " + GetStrLen(arr));
 
-      
+            int[] masivs = GenRandom(100);
+            PrintArr(masivs);
+
+
+
         }
 
         private static int GetStrLen(string[] arr)
