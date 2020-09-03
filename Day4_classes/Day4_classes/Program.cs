@@ -6,7 +6,7 @@ namespace Day4_classes
     {
         static void Main(string[] args)
         {
-            //
+            
         }
     }
 }
