@@ -57,6 +57,8 @@ namespace Day5_Objects
                     case "/":
                         Console.WriteLine(Darbibas.Div(number1, number2));
                         break;
+                    case "exit":
+                        break;
                     default:
                         Console.WriteLine("nepareiza ievade!");
                         break;
