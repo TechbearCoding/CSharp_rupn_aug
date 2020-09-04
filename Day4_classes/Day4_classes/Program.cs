@@ -7,7 +7,6 @@ namespace Day4_classes
         static void Main(string[] args)
         {
             Sample.TestPrint();
-            Sample.a = 4;
         }
     }
 }
