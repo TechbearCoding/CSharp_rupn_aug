@@ -6,6 +6,23 @@ namespace Day6_Objects
     {
         static void Main(string[] args)
         {
+            Student st = new Student();
+
+            Console.WriteLine("Ievadiet vardu!");
+            st.Name = Console.ReadLine();
+
+            Console.WriteLine("Ievadiet uzvardu!");
+            st.LastName = Console.ReadLine();
+
+            Console.WriteLine("Ievadiet kursu!");
+            st.Course = Convert.ToInt32(Console.ReadLine());
+
+            st.PrintInfo();
+
+        }
+
+        static void Sample1()
+        {
             Car car1 = new Car();
             car1.SetColor("Red");
             car1.brand = "Volkswagen";
@@ -21,7 +38,6 @@ namespace Day6_Objects
             car1.PrintInfo();
 
             car2.PrintInfo();
-
         }
     }
 }

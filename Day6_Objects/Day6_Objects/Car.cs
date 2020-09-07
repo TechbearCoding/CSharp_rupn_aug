@@ -6,21 +6,22 @@ namespace Day6_Objects
 {
     class Car
     {
+        private String _brand;
         public String brand 
         {
             get 
             {
-                return brand;
+                return _brand;
             }
             set 
             {
                 if(value.Length > 10)
                 {
-                    brand = "default";
+                    _brand = "default";
                 }
                 else
                 {
-                    brand = value;
+                    _brand = value;
                 }
                 
             } 
