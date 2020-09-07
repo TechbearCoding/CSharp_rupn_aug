@@ -10,6 +10,24 @@ namespace Day5_Objects
             Task2();
         }
 
+        static void TrySample()
+        {
+            int number = 0;
+            try
+            {
+                Console.WriteLine("ievadiet skaitli!");
+                number = Convert.ToInt32(Console.ReadLine());
+                
+            }
+            catch
+            {
+                Console.WriteLine("Nepareiza ievade!");
+            }
+
+            Console.WriteLine(number);
+
+        }
+
 
         static void Task2()
         {
@@ -21,6 +39,7 @@ namespace Day5_Objects
             {
                 Console.WriteLine("1- Izvadit");
                 Console.WriteLine("2- Pievienot");
+                Console.WriteLine("3- Dzest");
                 Console.WriteLine("0- Iziet");
 
                 choice = Console.ReadLine();
@@ -33,6 +52,9 @@ namespace Day5_Objects
                     case "2":
                         AddElement(lst);
                         break;
+                    case "3":
+                        RemoveElement(lst);
+                        break;
                     case "0":
                         break;
                     default:
@@ -40,6 +62,33 @@ namespace Day5_Objects
                         break;
                 }
             }
+        }
+
+        private static void RemoveElement(List<string> lst)
+        {
+            Console.WriteLine();
+
+            PrintLst(lst);
+
+            if (lst.Count == 0)
+            {
+                Console.WriteLine("Saraksts ir tukss!");
+                return;
+            }
+
+            try
+            {
+                Console.WriteLine("Kuru elementu velaties dzest?");
+                int toDelete = Convert.ToInt32(Console.ReadLine());
+                lst.RemoveAt(toDelete);
+            }
+            catch
+            {
+                Console.WriteLine("Kludaina ievade!");
+            }
+
+
+            Console.WriteLine();
         }
 
         private static void AddElement(List<string> lst)
