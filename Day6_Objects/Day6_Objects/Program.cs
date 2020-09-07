@@ -7,14 +7,16 @@ namespace Day6_Objects
         static void Main(string[] args)
         {
             Car car1 = new Car();
-            car1.color = "Red";
+            car1.SetColor("Red");
             car1.brand = "Volkswagen";
             car1.model = "Jetta";
 
             Car car2 = new Car();
-            car2.color = "White";
+            car2.SetColor("White");
             car2.brand = "BMW";
             car2.model = "M3";
+
+            Console.WriteLine(car2.GetColor() + " " + car2.brand);
 
             car1.PrintInfo();
 

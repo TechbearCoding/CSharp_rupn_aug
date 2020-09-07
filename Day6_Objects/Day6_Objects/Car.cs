@@ -6,9 +6,38 @@ namespace Day6_Objects
 {
     class Car
     {
-        public String brand;
-        public String model;
-        public String color;
+        public String brand 
+        {
+            get 
+            {
+                return brand;
+            }
+            set 
+            {
+                if(value.Length > 10)
+                {
+                    brand = "default";
+                }
+                else
+                {
+                    brand = value;
+                }
+                
+            } 
+        }
+        public String model { get; set; }
+        private String color;
+
+        public void SetColor(String localColor)
+        {
+            color = localColor;
+
+        }
+
+        public String GetColor()
+        {
+            return color;
+        }
 
         public void Drive()
         {
