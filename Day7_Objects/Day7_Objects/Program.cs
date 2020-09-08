@@ -7,9 +7,32 @@ namespace Day7_Objects
     {
         static void Main(string[] args)
         {
-            Sample3();
+            Task2();
         }
 
+        static void Task2()
+        {
+            List<Student> lstOfStudents = new List<Student>();
+
+            for(int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Ievadiet vardu!");
+                String name = Console.ReadLine();
+
+                Console.WriteLine("Ievadiet uzvardu!");
+                String lastName = Console.ReadLine();
+
+                Console.WriteLine("Ievadiet kursu!");
+                int course = Convert.ToInt32(Console.ReadLine());
+
+                lstOfStudents.Add(new Student(name, lastName, course));
+            }
+
+            foreach(Student st in lstOfStudents)
+            {
+                st.PrintInfo();
+            }
+        }
         static void Sample3()
         {
             List<Car> lstOfCars = new List<Car>();
