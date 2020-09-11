@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Day8_FileIO
+namespace Day9_Files
 {
     class FileOperations
     {   
@@ -30,14 +30,17 @@ namespace Day8_FileIO
                 Console.WriteLine("Neizdevas nolasit failu!");
             }
         }
-        public static void Write()
+        public static void Write(List<String> lst, String filename)
         {
 
             try
             {
-                StreamWriter sw = new StreamWriter(defaultPath + "Test.txt", true);
-                sw.WriteLine("Hello ");
-                sw.WriteLine("world!");
+                StreamWriter sw = new StreamWriter(defaultPath + filename, true);
+                
+                foreach(String el in lst)
+                {
+                    sw.WriteLine(el);
+                }
 
                 sw.Close();
             }
