@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Day9_Files
 {
@@ -7,11 +8,19 @@ namespace Day9_Files
     {
         static void Main(string[] args)
         {
-            List<String> lst = new List<String> {"aa", "bb", "cc", "dd" };
+            List<String> lst = FileOperations.ReadList("Test.txt");
 
-            FileOperations.Write(lst, "Test.txt");
+            List<String> newList = new List<String>();
 
-            FileOperations.Read("Test.txt");
+            for(int i = lst.Count-1; i >= 0; i--)
+            {
+                newList.Add(lst[i]);
+            }
+
+            FileOperations.Write(newList, "new.txt");
+            //FileOperations.Write(Enumerable.Reverse(lst).ToList(), "new.txt");
+
+
         }
     }
 }

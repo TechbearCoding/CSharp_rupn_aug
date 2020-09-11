@@ -6,18 +6,18 @@ using System.Text;
 namespace Day9_Files
 {
     class FileOperations
-    {   
-        private const String defaultPath  = @"C:\Users\Marti\Desktop\";
+    {
+        private const String defaultPath = @"C:\Users\Marti\Desktop\";
         public static void Read(String filename)
         {
             try
             {
-                
+
                 StreamReader sr = new StreamReader(defaultPath + filename);
 
                 String line = sr.ReadLine();
 
-                while(line != null)
+                while (line != null)
                 {
                     Console.WriteLine(line);
                     line = sr.ReadLine();
@@ -30,14 +30,40 @@ namespace Day9_Files
                 Console.WriteLine("Neizdevas nolasit failu!");
             }
         }
+
+        public static List<String> ReadList(String filename)
+        {
+            List<String> lst = new List<String>();
+            try
+            {
+
+                StreamReader sr = new StreamReader(defaultPath + filename);
+
+                String line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    lst.Add(line);
+                    line = sr.ReadLine();
+                }
+
+                sr.Close();
+            }
+            catch
+            {
+                Console.WriteLine("Neizdevas nolasit failu!");
+            }
+
+            return lst;
+        }
         public static void Write(List<String> lst, String filename)
         {
 
             try
             {
                 StreamWriter sw = new StreamWriter(defaultPath + filename, true);
-                
-                foreach(String el in lst)
+
+                foreach (String el in lst)
                 {
                     sw.WriteLine(el);
                 }
